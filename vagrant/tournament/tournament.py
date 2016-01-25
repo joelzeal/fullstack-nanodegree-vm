@@ -6,11 +6,6 @@
 import psycopg2
 
 
-def connect():
-    # Connect to the PostgreSQL database.  Returns a database connection.
-    return psycopg2.connect("dbname=tournament")
-
-
 def deleteMatches():
     """Remove all the match records from the database."""
     DB().execute("delete from matches", None, True)
